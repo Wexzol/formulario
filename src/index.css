@@ -1,0 +1,18 @@
+*{
+    background-color: #B5DEF0;
+    /* background-image:url(images.jpeg) ;
+    background-size: 350px;
+    background-repeat: no-repeat;
+    background-position: left; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+

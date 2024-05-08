@@ -1,0 +1,23 @@
+#formulario-registro {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  
+  #formulario-registro input[type="submit"] {
+    background-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    
+  }
+  
+#Nombre{
+  text-align: left;
+  font-size: 20px;
+}
