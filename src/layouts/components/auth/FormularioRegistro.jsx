@@ -20,7 +20,6 @@ const FormularioRegistro = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes manejar el envío del formulario, por ejemplo, almacenar los datos en el estado de React o enviarlos a un servidor.
     console.log(estudiante);
   };
 
