@@ -5,7 +5,7 @@ const ListaEstudiantes = ({ estudiantes }) => {
   return (
     <div>
       <h2>Lista de Estudiantes</h2>
-      
+      <h1>hola</h1>
       <ul>
         {estudiantes.map((estudiante, index) => (
           <li key={index}>
