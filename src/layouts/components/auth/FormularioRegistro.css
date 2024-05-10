@@ -1,4 +1,4 @@
-#formulario-registro {
+ /* #formulario-registro {
     margin-top: 60px;
     display: flex;
     flex-direction: column;
@@ -15,9 +15,5 @@
     border: none;
     cursor: pointer;
     
-  }
+  } */
   
-#Nombre{
-  text-align: left;
-  font-size: 20px;
-}

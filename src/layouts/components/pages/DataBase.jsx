@@ -1,0 +1,2 @@
+const estudiantes = [ ]
+export {estudiantes}

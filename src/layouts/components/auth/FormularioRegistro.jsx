@@ -1,54 +1,92 @@
-// FormularioRegistro.jsx
 import React, { useState } from 'react';
-import '/src/layouts/components/auth/FormularioRegistro.css';
+import { } from '/src/layouts/components/auth/FormularioRegistro.css';
+import { estudiantes } from "../pages/DataBase";
+import { useNavigate, Link } from "react-router-dom";
+
+
+// const FormularioRegistro = ({estudiantes}) => {
+//   const [estudiante, setEstudiante] = useState({
+//     nombre: '',
+//     apellido: '',
+//     edad: '',
+//     correo: '',
+//     nota: ''
+//   });
+
+//   const handleChange = (e) => {
+//     setEstudiante({
+//      ...estudiante,
+//       [e.target.name]: e.target.value
+//     });
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     // console.log(estudiante);
+//     estudiantes.push(estudiante)
+//     console.log(estudiantes)
+//   };
+
 
 const FormularioRegistro = () => {
-  const [estudiante, setEstudiante] = useState({
-    nombre: '',
-    apellido: '',
-    edad: '',
-    correo: '',
-    nota: ''
-  });
-
-  const handleChange = (e) => {
-    setEstudiante({
-     ...estudiante,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(estudiante);
-  };
+  const [nombre, setNombre] = useState("");
+  const [apellido, setApellido] = useState("");
+  const [edad, setEdad] = useState("");
+  const [correo, setCorreo] = useState("");
+  const [nota, setNota] = useState("");
+  function guardarFormularioRegistro() {
+    let estudiante = {
+      nombre,
+      apellido,
+      edad,
+      correo,
+      nota,
+    };
+    estudiantes.push(estudiante);
+  }
 
   return (
-    <form id="formulario-registro" onSubmit={handleSubmit}>
+    // <form id="formulario-registro" onSubmit={handleSubmit}>
 
-      <label htmlFor="nombre" className='Nombre' >Nombre:</label>
+    <form className="formulario" action="">
 
-      <input type="text" id="nombre" name="nombre" value={estudiante.nombre} onChange={handleChange} required />
+      <div className="label-input">
+        <label htmlFor="nombre" className='Nombre' >Nombre:</label>
+        <input type="text" id="nombre" name="nombre" onChange={(e) => setNombre(e.target.value)} required />
+      </div>
 
-      <label htmlFor="apellido">Apellido:</label>
+      <div className="label-input">
+        <label htmlFor="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" onChange={(e) => setApellido(e.target.value)} required />
+      </div>
 
-      <input type="text" id="apellido" name="apellido" value={estudiante.apellido} onChange={handleChange} required />
+      <div className="label-input">
+        <label htmlFor="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" onChange={(e) => setEdad(e.target.value)} required />
+      </div>
 
-      <label htmlFor="edad">Edad:</label>
+      <div className="label-input">
+        <label htmlFor="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" onChange={(e) => setCorreo(e.target.value)} required />
+      </div>
 
-      <input type="number" id="edad" name="edad" value={estudiante.edad} onChange={handleChange} required />
+      <div className="label-input">
+        <label htmlFor="nota">Nota del Curso:</label>
+        <input type="number" id="nota" name="nota" onChange={(e) => setNota(e.target.value)} required />
+      </div>
 
-      <label htmlFor="correo">Correo Electrónico:</label>
+      <div className="button-container">
+        <button type="submit" value={"Guardar"} onClick={guardarFormularioRegistro}>Guardar</button>
+      </div>
 
-      <input type="email" id="correo" name="correo" value={estudiante.correo} onChange={handleChange} required />
+      <div className="link-container">
+        <Link to={'/ListaEstudiantes'}> Lista Estudiante</Link>
+      </div>
 
-      <label htmlFor="nota">Nota del Curso:</label>
-
-      <input type="number" id="nota" name="nota" value={estudiante.nota} onChange={handleChange} required />
-
-      <button type="submit">Registrar</button>
     </form>
+
   );
 };
 
 export default FormularioRegistro;
+

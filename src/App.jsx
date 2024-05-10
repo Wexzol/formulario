@@ -1,20 +1,37 @@
-import React, { useState } from 'react';
-import FormularioRegistro from "./layouts/components/auth/FormularioRegistro"
-import ListaEstudiantes from "./layouts/components/auth/ListaEstudiantes"
+// import React, { useState } from 'react';
+// import FormularioRegistro from "./layouts/components/auth/FormularioRegistro"
+// import ListaEstudiantes from "./layouts/components/auth/ListaEstudiantes"
+// import {BrowserRouter as Router,Route, } from 'react-router-dom';
 
-const App = () => {
-  const [estudiantes, setEstudiantes] = useState([]);
 
-  const agregarEstudiante = (estudiante) => {
-    setEstudiantes([...estudiantes, estudiante]);
-  };
+// const App = () => {
+//   const [estudiantes, setEstudiantes] = useState([]);
 
-return (
-  <div className="App">
-    <FormularioRegistro agregarEstudiante={agregarEstudiante} />
-    <ListaEstudiantes estudiantes={estudiantes} />
-  </div>
-)
-}
+//   const agregarEstudiante = (estudiante) => {
+//     setEstudiantes([...estudiantes, estudiante]);
+//   };
 
-export default App
+// return (
+//   <Router>
+//      <div className="App">
+      
+   
+    
+//     <Switch>
+//         <Route path='/'>
+//         <FormularioRegistro agregarEstudiante={agregarEstudiante} estudiantes={estudiantes} />
+//         </Route>
+//     </Switch>
+//     <Switch>
+//         <Route path='/'>
+//         <ListaEstudiantes estudiantes={estudiantes} />
+//         </Route>
+//     </Switch>
+
+//   </div>
+//   </Router>
+ 
+// )
+// }
+
+// export default App
